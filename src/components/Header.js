@@ -45,6 +45,15 @@ const useStyles = makeStyles((theme) => ({
   hedderUp: {
     background: "#000",
     display: "flex"
+  },
+  cartIcons: {
+    display: "flex"
+  },
+  navbar: {
+    display: "flex"
+  },
+  navbarCollapse: {
+    display: "flex"
   }
 }));
 
@@ -91,12 +100,8 @@ export default function Header() {
                 </form>
               </div>
               <div class="col-lg-4 col-md-3 right-side-cart">
-                <div class="cart-icons">
-                  <ul>
-                    <li>
+                <div className={classes.cartIcons}>
                       <span class="far fa-heart"></span>
-                    </li>
-                    <li>
                       <button
                         type="button"
                         data-toggle="modal"
@@ -105,8 +110,7 @@ export default function Header() {
                         {" "}
                         <span class="far fa-user"></span>
                       </button>
-                    </li>
-                    <li class="toyscart toyscart2 cart cart box_1">
+                    <div class="toyscart toyscart2 cart cart box_1">
                       <form action="#" method="post" class="last">
                         <input type="hidden" name="cmd" value="_cart" />
                         <input type="hidden" name="display" value="1" />
@@ -119,13 +123,12 @@ export default function Header() {
                           <span class="fas fa-cart-arrow-down"></span>
                         </button>
                       </form>
-                    </li>
-                  </ul>
+                    </div>
                 </div>
               </div>
             </div>
           </div>
-          <nav class="navbar navbar-expand-lg navbar-light">
+          <nav className={classes.navbar}>
             <button
               class="navbar-toggler"
               type="button"
@@ -137,11 +140,7 @@ export default function Header() {
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="navbarSupportedContent"
-            >
-              <ul class="navbar-nav ">
+            <div className={classes.navbarCollapse}>
                 <li class="nav-item active">
                   <Link class="nav-link" to="/">
                     Home <span class="sr-only">(current)</span>
@@ -215,7 +214,6 @@ export default function Header() {
                     Contact
                   </Link>
                 </li>
-              </ul>
             </div>
           </nav>
         </AppBar>
