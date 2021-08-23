@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: "100%"
   },
+  appBar: {
+    boxShadow: "none",
+  },
   infoTopGrid: {
     width: "100%",
     backgroundColor: alpha(theme.palette.common.white, 0.7),
@@ -63,7 +66,7 @@ export default function Header() {
   return (
     <React.Fragment>
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" color="transparent" className={classes.appBar}>
           <div className={classes.infoTopGrid}>
             <div className={classes.infoContactAgile}>
               <Typography className={classes.title}>
