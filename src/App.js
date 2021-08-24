@@ -1,8 +1,7 @@
 import React from "react";
 import "./style.css";
 import { loadCSS } from "fg-loadcss";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Header from "./components/Header";
+import ToysShop from "./components/ToysShop";
 
 export default function App() {
   React.useEffect(() => {
@@ -18,9 +17,7 @@ export default function App() {
 
   return (
     <React.Fragment>
-      <Router>
-        <Header />
-      </Router>
+      <ToysShop />
     </React.Fragment>
   );
 }
